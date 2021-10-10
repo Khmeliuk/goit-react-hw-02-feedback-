@@ -1,5 +1,5 @@
 import s from "./statistic.module.css";
-
+import PropTypes from "prop-types";
 export default function Statistics({ good, neutral, bad, total, positive }) {
   return (
     <ul>
@@ -13,3 +13,11 @@ export default function Statistics({ good, neutral, bad, total, positive }) {
     </ul>
   );
 }
+
+Statistics.prototype = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positive: PropTypes.number.isRequired,
+};

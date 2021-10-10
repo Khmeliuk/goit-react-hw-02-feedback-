@@ -1,4 +1,5 @@
 import s from "./FeedbackOptions.module.css";
+import PropTypes from "prop-types";
 export default function FeedbackOptions({ options, onLeaveFeedback }) {
   return options.map((option) => {
     return (
@@ -14,3 +15,7 @@ export default function FeedbackOptions({ options, onLeaveFeedback }) {
     );
   });
 }
+
+FeedbackOptions.prototype = {
+  option: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
