@@ -1,0 +1,9 @@
+.optionButton {
+  background-color: aqua;
+  width: 60px;
+  border: none;
+  margin-left: 10px;
+}
+.optionButton:active {
+  background-color: blue;
+}
